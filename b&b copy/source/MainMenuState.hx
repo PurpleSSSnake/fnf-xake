@@ -695,68 +695,7 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 
-		super.update(elapsed);
-
-		if (curCharacter == 'cj') {
-			if (FlxG.keys.justPressed.I || FlxG.keys.justPressed.J || FlxG.keys.justPressed.K || FlxG.keys.justPressed.L) {
-				character.playAnim('haha', true);
-				FlxG.sound.play(Paths.sound('cjhaha', 'shared'), 0.6);
-				character.holdTimer = 0;
-			}
-		} else {
-			if (FlxG.keys.justPressed.I) {
-				character.playAnim('singUP', true);
-				character.holdTimer = 0;
-				if (useCharacter2) {
-					character2.playAnim('singUP', true);
-					character2.holdTimer = 0;
-				}
-				if (curCharacter == 'cerberus')
-					FlxG.sound.play(Paths.sound('CerberusBark', 'shared'), 0.6);
-			}
-			if (FlxG.keys.justPressed.K) {
-				character.playAnim('singDOWN', true);
-				character.holdTimer = 0;
-				if (useCharacter2) {
-					character2.playAnim('singDOWN', true);
-					character2.holdTimer = 0;
-				}
-				if (curCharacter == 'cerberus')
-					FlxG.sound.play(Paths.sound('CerberusBark', 'shared'), 0.6);
-			}
-			if (FlxG.keys.justPressed.J) {
-				character.playAnim('singLEFT', true);
-				character.holdTimer = 0;
-				if (useCharacter2) {
-					character2.playAnim('singLEFT', true);
-					character2.holdTimer = 0;
-				}
-				if (curCharacter == 'cerberus')
-					FlxG.sound.play(Paths.sound('CerberusBark', 'shared'), 0.6);
-			}
-			if (FlxG.keys.justPressed.L) {
-				character.playAnim('singRIGHT', true);
-				character.holdTimer = 0;
-				if (useCharacter2) {
-					character2.playAnim('singRIGHT', true);
-					character2.holdTimer = 0;
-				}
-				if (curCharacter == 'cerberus')
-					FlxG.sound.play(Paths.sound('CerberusBark', 'shared'), 0.6);
-			}
-		}
-		/*if (FlxG.keys.justPressed.U) {
-			character.playAnim('idle');
-		}*/
-		/*if (curCharacter == 'cj' && FlxG.keys.justPressed.O) {
-			character.playAnim('haha', true);
-			FlxG.sound.play(Paths.sound('cjhaha', 'shared'), 0.6);
-			character.holdTimer = 0;
-		}*/
-		
-		/*if (camFollow.y != targetY) {
-			camFollow.y = FlxMath.lerp(camFollow.y, targetY, 0.7);
-		}*/
+		super.update(elapsed);		
 	}
 
 	override function beatHit()
